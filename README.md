@@ -46,9 +46,9 @@ in BMVC 2023
 
 ## Dataset Download
 
-1. Fill out the [Google Form](https://forms.gle/wsfpLX6g7A1FDz5y5 ) and you will receive an agreement. 
+1. Fill out the [Google Form](https://forms.gle/wsfpLX6g7A1FDz5y5) and sign the agreement. 
 
-1. Sign the agreement and send it back to us. Then we will share you the link of SPHP dataset. (It may take a few days.)
+1. We will share you the link of SPHP dataset. (It may take a few days.)
 
 1. Download the dataset and put `Master.tar.gz` and `Slave.tar.gz` under the `data` folder.
 
