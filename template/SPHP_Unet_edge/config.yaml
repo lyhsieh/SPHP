@@ -1,0 +1,53 @@
+dataset_args:
+    train:
+        dataset_type: &dataset_type 'SPHP.SPHPDataset'
+        dataset_path: &dataset_path '/media/public_dataset/MV-dataset/LabelData'
+        aug: False
+        subject: ['s01','s02','s03','s04','s05','s11','s12','s13','s14','s15'
+        ,'s21','s22','s23','s24','s25','s31','s32','s33','s34','s35']
+        camera: ['Master','Slave']
+        movement_class: 'ALL' # C1, C2, C3, C4, ALL
+        img_format: &img_format 'EDG'
+        calib_path: &calib_path "/media/public_dataset/MV-dataset/cal/calibrate.npy"
+        loader_args:
+            batch_size: 64
+            num_workers: &num_workers 8
+            shuffle: True
+            drop_last: True
+            pin_memory: True
+    val:
+        dataset_type: *dataset_type
+        dataset_path: *dataset_path
+        aug: False
+        subject: ['s06','s07','s08','s16','s17','s18','s26','s27','s28','s36','s37','s38'] 
+        # subject: ['s09','s10','s19','s20','s29','s30','s39','s40']
+        camera: ['Master','Slave']
+        movement_class: 'ALL' # C1, C2, C3, C4, ALL
+        img_format: *img_format
+        calib_path: *calib_path
+        loader_args:
+            batch_size: 64
+            num_workers: *num_workers
+            shuffle: False
+            drop_last: False
+            pin_memory: True
+fitting_args:
+    optimizer_args:
+        type: 'RMSprop'
+        args:
+            lr: 0.003
+            alpha: 0.9
+    scheduler_args:
+        type: 'MultiStepLR'
+        args:
+            milestones: [9, 14]
+            gamma: 0.1
+            verbose: True
+model_args:
+    save_path: './save'
+
+exp_args:
+    seed: 224
+    epoch: 100
+    exp_path: './experiments'
+    val_results_path: 'val_results_tmp'

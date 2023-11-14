@@ -1,0 +1,23 @@
+numpy
+pillow
+scipy
+scikit-image
+scikit-learn
+imageio
+opencv-python-headless
+matplotlib
+attrdict
+torch
+# torchvision
+# torchaudio
+tensorboard
+# pytorch3d
+pylsd-nova
+tqdm
+pyyaml
+munkres
+json-tricks
+xtcocotools
+pytorch_lightning
+h5py
+kornia
