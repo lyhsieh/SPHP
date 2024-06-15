@@ -89,7 +89,7 @@ in BMVC 2023
         └── ...
     ```
     
-    The file structure in `Slave` should be the same to `Master`.
+    The file structure in `Slave` should be the same as `Master`.
 
 ## Training
 
